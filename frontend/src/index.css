@@ -2,3 +2,7 @@ body {
     color: white;
     background: #202020;
 }
+
+body a {
+    color: white;
+}

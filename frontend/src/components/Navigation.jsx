@@ -5,6 +5,6 @@ export const Navigation = () => (
     <Link to="/tasks">
       <h1>Tasks App</h1>
     </Link>
-    <Link to="/task-create">Create task</Link>
+    <Link to="/create-task">Create task</Link>
   </nav>
 );
