@@ -21,7 +21,7 @@ export function TasksList() {
 
   return (
     <div>
-      <ul>
+      <ul className="grid grid-cols-3 gap-3">
         {tasks.map((task) => <TaskItem key={task.id} task={task} />)}
       </ul>
     </div>

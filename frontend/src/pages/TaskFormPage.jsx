@@ -51,24 +51,26 @@ export function TaskFormPage() {
   });
 
   return (
-    <div>
+    <div className="max-w-xl mx-auto">
       <form onSubmit={onSubmit}>
         <input
           type="text"
-          name=""
+          className="bg-zinc-700 p-3 rounded-lg block w-full mb-3"
           placeholder="title"
           {...register("title", { required: true })}
         />
         {errors.title && <span>*Title is required</span>}
         <textarea
-          name=""
+          className="bg-zinc-700 p-3 rounded-lg block w-full mb-3"
           rows="3"
           placeholder="description"
           {...register("description", { required: true })}
         >
         </textarea>
         {errors.description && <span>*Description is required</span>}
-        <button type="submit">Save</button>
+        <button className="bg-indigo-500 p-3 rounded-lg block w-full mt-3" type="submit">
+          Save
+        </button>
       </form>
     </div>
   );

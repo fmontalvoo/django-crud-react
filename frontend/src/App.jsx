@@ -10,15 +10,15 @@ function App() {
   return (
     <BrowserRouter>
       <Navigation />
-
-      <Routes>
-        <Route path="/" element={<Navigate to="/tasks" />} />
-        <Route path="/tasks" element={<TasksPage />} />
-        <Route path="/create-task" element={<TaskFormPage />} />
-        <Route path="/update-task/:id" element={<TaskFormPage />} />
-      </Routes>
-
-      <Toaster />
+      <div className="container mx-auto px-5">
+        <Routes>
+          <Route path="/" element={<Navigate to="/tasks" />} />
+          <Route path="/tasks" element={<TasksPage />} />
+          <Route path="/create-task" element={<TaskFormPage />} />
+          <Route path="/update-task/:id" element={<TaskFormPage />} />
+        </Routes>
+        <Toaster />
+      </div>
     </BrowserRouter>
   );
 }
