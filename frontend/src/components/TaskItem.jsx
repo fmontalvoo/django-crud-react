@@ -1,3 +1,4 @@
+import { toast } from "react-hot-toast";
 import { Link } from "react-router-dom";
 
 import { deleteTask } from "../services/tasks";
@@ -6,8 +7,11 @@ export function TaskItem({ task }) {
   const onDeleteTask = (id) => {
     if (confirm("Are your sure?")) {
       deleteTask(id)
-        .then(() => location.reload())
-        .catch(console.error);
+        .then(() => {
+          location.reload();
+          toast.success("Task deleted");
+        })
+        .catch(toast.error);
     }
   };
 

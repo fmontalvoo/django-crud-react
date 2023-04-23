@@ -1,5 +1,6 @@
 import { useEffect } from "react";
-import { set, useForm } from "react-hook-form";
+import { toast } from "react-hot-toast";
+import { useForm } from "react-hook-form";
 import { useNavigate, useParams } from "react-router-dom";
 
 import { createTask, getTask, updateTask } from "../services/tasks";
@@ -43,9 +44,10 @@ export function TaskFormPage() {
     promise
       .then((res) => {
         console.table(res.data);
+        toast.success("Task saved");
         navigate("/tasks");
       })
-      .catch(console.error);
+      .catch(toast.error);
   });
 
   return (

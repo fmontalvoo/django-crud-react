@@ -1,3 +1,4 @@
+import { Toaster } from "react-hot-toast";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
 import { Navigation } from "./components/Navigation";
@@ -16,6 +17,8 @@ function App() {
         <Route path="/create-task" element={<TaskFormPage />} />
         <Route path="/update-task/:id" element={<TaskFormPage />} />
       </Routes>
+
+      <Toaster />
     </BrowserRouter>
   );
 }
